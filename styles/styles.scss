@@ -25,17 +25,19 @@ body {
       height: 100%;
     }
   .title {
-    margin-top: 5rem;
+    margin: 2rem auto 1rem;
     position: relative;
-    > h1 {
-      margin: 8px 0;
+     h1 {
+      margin: 0 auto;
       color: #282828;
-      font-size: 4rem;
+      font-size: 3.5rem;
+      text-align: center;
       text-transform: uppercase;
-      text-shadow: 1px 3px 1px #ee4e34;
+      text-shadow: 2px 2px 1px #ee4e34;
+
       @media screen and (max-width: 680px) {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 1.6rem;
+        padding: 0.25rem 0.5rem;
       }
 
     }
@@ -68,6 +70,7 @@ body {
         width: 100%;
         height: auto;
         clip-path: none;
+        border-bottom: 1px solid #888;
       }
       .row-headline {
         font-size: 0.875rem;
@@ -75,7 +78,7 @@ body {
         font-weight: 500;
         text-align: right;
         width: 100%;
-        margin-bottom: 10px;
+        margin: 0 auto 1rem;
         display: block;
       }
       img {
@@ -85,6 +88,11 @@ body {
         height: 200px;
         object-fit: cover;
         filter: drop-shadow(1px 1px 2px black) grayscale(1);
+
+        @media screen and (max-width: 680px) {
+          filter: drop-shadow(1px 1px 1px #ee4e34);
+        }
+
       }
       .info {
         width: 100%;
@@ -99,7 +107,7 @@ body {
         bottom: 24px;
         font-size: 0.8rem;
         h4 {
-          margin: 0.25rem;
+          margin: 1rem auto 1rem auto;
           color: #ee4e34;
           font-size: 1.1rem;
           
@@ -108,31 +116,10 @@ body {
             color: #f8f8f8;
             border-radius: 25px;
             width: 80%;
+            margin: 1rem auto 0 1rem;
         }
       }
     }
-  }
-}
-
-.go-back {
-  cursor: pointer;
-  color: #282828;
-  background-color: #f8f8f8;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  text-align: left;
-  position: absolute;
-  top: 200px;
-  left: 400px;
-  transition: all 0.4s ease;
-
-  &:hover {
-    background-color: #ee4e34;
-    color: white;
-  }
-  @media screen and (max-width: 680px) {
-   top: 50px;
-   left: 50px;
   }
 }
 
@@ -141,7 +128,30 @@ body {
   width: 100%;
   background-color: #121212;
 
+  .go-back {
+    cursor: pointer;
+    color: #282828;
+    background-color: #f8f8f8;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    transition: all 0.4s ease;
+    z-index: 100;
+  
+    &:hover {
+      background-color: #ee4e34;
+      color: white;
+    }
+    @media screen and (max-width: 680px) {
+     top: 50px;
+     left: 50px;
+    }
+  }
+
   .f-card {
+    margin: 0 auto;
     height: 100%;
     width: 80%;
     display: flex;
@@ -157,17 +167,23 @@ body {
       left: 50%;
       top: 20%;
       width: 20%;
+      min-width: 300px;
       background: #ee4e34;
 
       @media screen and (max-width: 680px) {
         position: absolute;
         width: 100%;
+        height: 60%;
       }
       img {
-        cursor: move;
+        margin-top: 5%;
+        cursor: pionter;
         width: 100%;
         filter: drop-shadow(1px 1px 1px #000000) drop-shadow(0px 8px 10px rgba(0,0,0,0.825));
         margin-bottom: 20rem;
+        @media screen and (max-width: 680px) {
+        margin-top: 20%;
+        }
       }
     }
     .details {
@@ -177,7 +193,8 @@ body {
 
       @media screen and (max-width: 680px) {
         position: absolute;
-        top: 30%;
+        margin: 0;
+        top: 50%;
         width: 100%;
         z-index: 10;
       }
@@ -186,7 +203,7 @@ body {
         position: relative;
         @media screen and (max-width: 680px) {
           width: 100%;
-          margin-left: 5rem;
+          margin: 10rem 0 0 3rem;
         }
         
         .title {
@@ -201,23 +218,32 @@ body {
         h1 {
           color: #ee4e34;
           @media screen and (max-width: 680px) {
+            background-color: #ee4e34;
+        background-image: linear-gradient(to right, #ee4e34 37.5%, #000 37.5%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
             filter: drop-shadow(1px 1px 2px black) drop-shadow(5px 10px 10px rgba(0,0,0,.225));
           }
         }
         p {
           color: #eeecec;
-          text-shadow: 1px 1px 2px rgba(0,0,0,0.335);
+          text-shadow: 1px 1px 2px rgba(0,0,0,), 0 0 8px rgba(0,0,0,1);
           font-weight: 300;
         }
         .additonals {
-          margin: 24px 0 48px;
+          margin: 0.25rem 0 0.25rem;
           span {
-            margin-right: 16px;
-            color: #4e4e4e;
+          color: #4e4e4e;
+          
+
           }
         }
         .steps {
           color: #f0f0f0;
+          text-shadow: 1px 1px 2px rgba(0,0,0,), 0 0 8px rgba(0,0,0,1);
         }
       }
     }

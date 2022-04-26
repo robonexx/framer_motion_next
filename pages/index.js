@@ -48,7 +48,7 @@ const Index = (props) => (
         initial={{ opacity: 0 }}
         className='title'
       >
-        <h1>OG Locking Pioneers</h1>
+        <h1>Masters of the artform locking</h1>
       </motion.div>
       <motion.div variants={stagger} className='row'>
         {props.pioneers.map((pioneer) => (

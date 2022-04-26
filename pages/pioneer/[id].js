@@ -31,13 +31,17 @@ const fadeInUp = {
 
 const Pioneer = (props) => (
   <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
-     <Link href='/'>
-        <motion.div initial={{x: -1000, y: 0}} animate={{x: 0, y: 0}} transition={{delay: 0.4, duration: 0.5}}>
+    <div className='fullscreen'>
+      <Link href='/'>
+        <motion.div
+          initial={{ x: -1000, y: 0 }}
+          animate={{ x: 0, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
           <a className='go-back'>Back to pioneers</a>
         </motion.div>
       </Link>
-    <div className='fullscreen'>
-     
+
       <div className='f-card'>
         <motion.div
           className='img'
